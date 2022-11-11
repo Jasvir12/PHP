@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+    <form action="" name="myform" method="post">
+	Username: <input type="text" name="uname"><br><br>
+	<input type="Submit" name="submit" value="Submit">
+	</form>
+	<script>
+	   function validatedata()
+	   {
+	     var ptrn = /^([^0-9\w]*)$/;
+		 if(ptrn.test(document.myform.uname.value))
+		 {
+		 document.myform.uname.style.backgroundcolor = 'green';
+		 } else{
+		 document.myform.uname.style.backgroundcolor = 'red';
+		 }
+		 }
+		 document.myform.uname.addEventListener("keuyp",validatedata);
+	</script>
+
+</body>
+</html>

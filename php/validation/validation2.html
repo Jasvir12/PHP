@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit="return myFun()">
+        Username: <input type="text"  id="User_Name" value="">
+        <span id="Message"></span>
+        <br><br>
+		password: <input type="password" 
+        <input type="submit"  value="Submit">
+        </form>
+        <script>
+           function myFun()
+            
+           {
+             var correct_way = /^[A-za-z]+$/;
+
+             var a =document.getElementById("User_Name").value;
+
+             if(a=="")
+             {
+                 document.getElementById("Message").innerHTML="** Please fill username";
+                 return false;
+                
+             }
+             if(a.length<3)
+             {
+                document.getElementById("Message").innerHTML="**  username must be 3character";
+                 return false;
+                
+             }
+             if(a.length>20)
+             {
+                document.getElementById("Message").innerHTML="**  username must be less than 20 character";
+                 return false;
+                
+             }
+             if(a.match(correct_way))
+                 true;
+                 else{
+                    document.getElementById("Message").innerHTML="**  only alphabets are allowed";
+                 return false;
+
+
+                 
+             }
+             }
+             
+        </script>
+		<script>
+		function CheckPassword(inputtxt) 
+{ 
+var passw=  /^[A-Za-z]\w{7,14}$/;
+if(inputtxt.value.match(passw)) 
+{ 
+alert('Correct, try another...')
+return true;
+}
+else
+{ 
+alert('Wrong...!')
+return false;
+}
+}</script>
+</body>
+</html>
